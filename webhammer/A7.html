@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+
+    <!-- <div id="sample"></div> -->
+    
+    <script>
+        var name=prompt("Please enter your name.");
+     
+
+        var word=[];
+
+        for(let i=0;i<5;i++){
+            word.push(prompt("Please enter word "+(i+1)));
+
+        }
+
+        var color=prompt("Please specify a color(one of the 16 named colors or a hex value)");
+
+        document.write("<h1>Hello "+name+"!</h1");
+
+        var outertag=document.createElement("div");
+        
+        for(let i=0;i<5;i++){
+            let tag=document.createElement("p");
+            let text=document.createTextNode(word[i]);
+            tag.appendChild(text);
+            outertag.appendChild(tag);
+            
+
+        }
+
+        // console.log(outertag);
+        
+
+        // var parent=document.getElementsByTagName('body');
+        var parent= document.querySelector('body');
+        parent.appendChild(outertag);
+
+
+        // parent.setAttribute('class', 'poem');        
+
+        parent.style.display='flex';
+        parent.style.flexDirection='column';
+        parent.style.justifyContent= 'space-evenly';
+        parent.style.alignItems= 'center';
+
+        // parent.style.color=color;
+
+
+        var para=document.querySelectorAll('p');
+        for(let i=0;i<para.length;i++){
+            para[i].style.padding ='2px';
+            para[i].style.backgroundColor=color;
+
+        }
+        
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

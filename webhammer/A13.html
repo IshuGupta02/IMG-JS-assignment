@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="button">
+        
+    </form>
+
+    <script>
+        var parent=document.querySelector('form');
+        var input1=parent.querySelector('input');
+
+        input1.addEventListener("click", ()=>{
+            myfuntion();
+        });
+
+        // input1.addEventListener("click", function(){
+        //     document.querySelector('body').style.backgroundColor='blue';
+        // })
+
+        const myfuntion=()=>{
+            document.querySelector('body').style.backgroundColor='blue';
+        }
+
+        // function myfuntion(){
+        //     document.querySelector('body').style.backgroundColor='blue';
+        // }
+
+        // input1.OnClick{
+        //     document.querySelector('body').style.backgroundColor='blue';
+
+
+        // }
+
+
+
+        // document.querySelector('button').onclick=function(){
+        //     myfuntion();
+        // }
+
+
+
+    </script>
+    
+</body>
+</html>

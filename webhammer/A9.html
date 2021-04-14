@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="mail.png" alt="">
+    <img src="mail.png" alt="">
+    <img src="mail.png" alt="">
+    
+
+    <script>
+        var image=document.querySelectorAll('img');
+
+
+        for(let i=0;i<image.length;i++){
+            image[i].style.width='100px';
+        }
+
+        image[0].addEventListener("mouseover", (e)=>{
+            image[0].src='phone.png';
+        });
+        image[1].addEventListener("mouseover", (e)=>{
+            image[1].src='instagram.png';
+        });
+        image[2].addEventListener("mouseover", (e)=>{
+            image[2].src='medium.png';
+        });
+
+
+        for(let i=0;i<image.length;i++){
+            image[i].addEventListener("mouseout", (e)=>{
+                image[i].src='mail.png';
+            });
+        }
+        
+
+    </script>
+    
+</body>
+</html>

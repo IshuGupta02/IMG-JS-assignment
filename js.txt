@@ -1,0 +1,66 @@
+JS is a scripting language.
+node js
+go
+deno
+; not very necessary
+let vs var-hoisting
+local, global
+closers in JS
+let, var, const- functional scope
+loops
+for in version
+if else
+switch case
+do use break and default in js in switch case
+DOM
+iframe
+document.createElement('Li');
+document.createTextNode('Water');
+appendChild()
+append()
+coneNode()
+adoptNode()
+querySelector()--takes first instance
+querySelectorAll()
+getElementbyId()
+getElementbyClassName()
+getElementbyTagName()
+eventListener
+onClick
+<button onclick="myFunction()">Click me</button>
+function myFunction(){
+	console.log('hello')
+}
+onChange
+onmousehover
+onkeydown
+key.id
+onLoad
+
+
+
+
+*HTTP
+what is http
+methods- get, post, patch, fetch, etc
+get- to get info	status:200
+post- to send info	status:201
+	payload- info that goes with request
+patch- to change an already existing thing
+API- to contact betn 2 applications
+eg IRCTC, MMT, yatra
+
+
+*ASYNCHRONOUS
+setTimeout()
+js is synchronus by design.
+but it is made asynchronous using event loop.
+
+latentflip.com/loupe
+
+*xhr request
+*AJAX
+*regex
+
+*JSON
+*XML

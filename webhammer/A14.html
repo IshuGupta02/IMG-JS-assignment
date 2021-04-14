@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var num=0;
+        var image1=document.getElementsByTagName('img');
+        console.log(image1);
+        // var image=document.querySelector('img');
+        // console.log(image);
+        image1[0].style.height='100px';
+        
+        image1[0].addEventListener("click", (e)=>{
+            if(num===3){
+               
+                image1[0].src='phone.png';
+
+            }
+            else{
+                image1[0].src='mail.png';
+
+            }
+            myfunction();
+
+        })
+
+        const myfunction=()=>{
+            num++;
+            console.log(num);
+        }
+
+    </script>
+</head>
+<body>
+
+    <img src="mail.png" alt="" >
+    
+</body>
+</html>

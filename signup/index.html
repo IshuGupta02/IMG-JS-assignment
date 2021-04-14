@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <form action="" class="signup" name="myForm">
+
+        <div>
+            <label for="name">ENTER NAME</label>
+            <input type="text" id="name" onkeyup="validateName()">
+            <label id="name_validate"></label>
+
+        </div>
+
+        <div>
+            <label for="city">CITY</label>
+            <input type="text" id="city" onkeyup="validateCity()">
+            <label id="city_validate"></label>
+        </div>
+        
+        <div>
+            <label for="password1">PASSWORD</label>
+            <input type="password" id="password1" onkeyup="validatePassword1()">
+            <label id="password_validate_original"></label>
+            
+        </div>
+
+        <div>
+            <label for="passowrd2"> CONFIRM PASSWORD</label>
+            <input type="password" id="password2" onkeyup="validatePassword2()">
+            <label id="password_validate"></label>
+
+        </div>
+
+        <div>
+            <label for="mail_id">Email</label>
+            <input type="email" id="mail_id" onkeyup="validateEmail()">
+            <label id="email_validate"></label>
+
+        </div>
+
+
+
+        <div>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+
+            </div>
+
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+
+            </div>
+
+            <div>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+
+
+            </div>
+
+            <label id="gender_validate"></label>
+
+        </div>
+
+        <div>
+            <label for="age">AGE</label>
+            <input type="Number" id="age" onkeyup="validateAge()">
+            <label id="age_validate"></label>
+
+        </div>
+
+
+        <div>
+            <label for="phone">PHONE NUMBER</label>
+            <input type="text" id="phone" onkeyup="validatePhone()">
+            <label id="phone_validate"></label>
+
+
+        </div>
+
+        <div>
+            <label for="education">Education qualification</label>
+
+            <select name="education1" id="education">
+                <option value="Select qualification">Select qualification</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="Graduation">Graduation</option>
+                <option value="Above Graduation">Above Graduation</option>
+            </select>
+            <label id="education_validate"></label>
+
+        </div>
+
+        
+
+        <!-- <button onclick="checkall()">
+            Submit
+
+        </button>
+            -->
+
+            <input type="button" onclick="checkall()" value="Submit">
+
+
+    </form>
+
+    <!-- educational qualification (Dropdown)
+    phone number (Indian mobile number)
+    Age
+    Gender
+    Email
+    Password
+    Confirm password
+    Name
+    City -->
+
+
+
+    
+</body>
+</html>
