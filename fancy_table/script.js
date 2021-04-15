@@ -61,13 +61,9 @@ function loadData(){
               innerchild5.appendChild(avatar);
               child.appendChild(innerchild5);
 
+              child.className="inner_div";
 
               document.getElementById("load_here").appendChild(child);
-              
-              
-
-             
-
 
 
             }

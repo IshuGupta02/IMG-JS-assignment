@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <style>
+        .image{
+            height: 100px;
+        }
+
+    </style>
+
     <script>
         function open(){
             window.open("https://www.google.com/");
         }
+
+        function close(){
+            // window.open("https://www.google.com/");
+        }
     </script>
 </head>
 <body>
-    <button onclick="open()">
-        Open google
+
+    <img src="mail.png" alt="" id="image" onclick="open()" class="image">
+    <button onclick="close()">
+        Close google
     </button>
     
 </body>

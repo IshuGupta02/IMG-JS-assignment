@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding:0;
+}
+div{
+    display: inline;
+}
+.outer{
+
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr ;
+
+
+}
+
+.inner_div{
+    display:grid ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr ;
+
+
+}
+img{
+    height:100%
+
+}

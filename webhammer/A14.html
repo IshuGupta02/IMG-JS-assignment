@@ -8,36 +8,38 @@
 
     <script>
         var num=0;
-        var image1=document.getElementsByTagName('img');
-        console.log(image1);
-        // var image=document.querySelector('img');
-        // console.log(image);
-        image1[0].style.height='100px';
-        
-        image1[0].addEventListener("click", (e)=>{
+
+        const myfunction=()=>{
+                num++;
+                console.log(num);
+        }
+
+        function myfunc(){
+           
+           
+            
+            
             if(num===3){
-               
-                image1[0].src='phone.png';
+                
+                document.getElementById('image').src='phone.png';
 
             }
             else{
-                image1[0].src='mail.png';
+                document.getElementById('image').src='mail.png';
 
             }
             myfunction();
 
-        })
+            
 
-        const myfunction=()=>{
-            num++;
-            console.log(num);
         }
+        
 
     </script>
 </head>
 <body>
 
-    <img src="mail.png" alt="" >
+    <img src="mail.png" alt="" id="image" onclick="myfunc()" >
     
 </body>
 </html>
