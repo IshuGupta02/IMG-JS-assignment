@@ -18,7 +18,7 @@ function validateName(){
         return false;
     }
 
-    createprompt("","name_validate");
+    createprompt("valid!","name_validate");
     // console.log("valid");
     return true;
 
@@ -40,7 +40,7 @@ function validateCity(){
         return false;
     }
 
-    createprompt("","city_validate");
+    createprompt("valid!","city_validate");
     return true;
 
 }
@@ -80,14 +80,21 @@ function validatePassword1(){
         return false;
     }
 
-    if(!pass1.match(/[]/)){ //!@#$%^&*()_-+={[}]|\:;"'<,>.?
-        // \^\$\+={}\\\"\'\.\?
+    // if(!pass1.match(/(?=.{6,})(?=.\d+)(?=.[@#$%&*!]+)(?=[A-Za-z]+)/)){
+    //     createprompt("should contain atleast one digit, uppercase, lowecase letter and a special character","password_validate_original");
+    //     return false;
+        
 
-        createprompt("should contain atleast special character","password_validate_original");
-        return false;
-    }
+    // }
 
-    createprompt("correct password","password_validate_original");
+    // if(!pass1.match(/[]/)){ //!@#$%^&*()_-+={[}]|\:;"'<,>.?
+    //     // \^\$\+={}\\\"\'\.\?
+
+    //     createprompt("should contain atleast special character","password_validate_original");
+    //     return false;
+    // }
+
+    createprompt("valid!","password_validate_original");
     return true;
 
 
@@ -110,7 +117,7 @@ function validatePassword2(){
 
     }
 
-    createprompt("","password_validate");
+    createprompt("valid!","password_validate");
     return true;
 
 }
@@ -132,7 +139,7 @@ function validateEmail(){
 
     }
 
-    createprompt("","email_validate");
+    createprompt("valid!","email_validate");
     return true;
 
 }
@@ -154,7 +161,7 @@ function validatePhone(){
 
     }
 
-    createprompt("","phone_validate");
+    createprompt("valid!","phone_validate");
     return true;
 
     
@@ -180,7 +187,7 @@ function validateAge(){
         return false;
     }
 
-    createprompt("","age_validate");
+    createprompt("valid!","age_validate");
     return true;
 
 }
@@ -192,7 +199,7 @@ function validateGender(){
         return false;
 
     }
-    createprompt("","gender_validate");
+    createprompt("valid!","gender_validate");
     return true;
 }
 
@@ -205,7 +212,7 @@ function validateQualification(){
 
     }
 
-    createprompt("","education_validate");
+    createprompt("valid!","education_validate");
 
     return true;
 
