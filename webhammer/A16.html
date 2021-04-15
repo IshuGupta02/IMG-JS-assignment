@@ -81,6 +81,36 @@
 
 
     <script>
+        var pos=0;
+        var ids=["marble1","marble2","marble4","marble6","marble5","marble3"];
+        
+        var id;
+        // function startA(){
+        //     document.getElementById(ids[pos]).src="marble1.jpg";
+
+        // }
+
+        function startA(){
+            document.getElementById(ids[pos]).src="marble1.jpg";
+
+
+            pos=(pos+1)%6;
+            document.getElementById(ids[pos]).src="marble2.jpg";
+
+            id = setTimeout(startA, 500);
+
+        }
+
+        function func1(){
+            clearTimeout(id);
+
+        }
+        function func2(){
+            startA();
+
+        }
+
+
 
     </script>
     
