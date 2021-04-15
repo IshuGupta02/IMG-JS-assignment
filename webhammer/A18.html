@@ -7,6 +7,27 @@
     <title>Document</title>
 </head>
 <body>
+    <img src="mail.png" alt="" onclick="func()">
+
+
+    <script>
+        var ht = screen.height;
+        var wd = screen.width;
+        var right=wd-300;
+        var bottom=ht-300;
+        var center1=ht/2-150;
+        var center2=wd/2-150;
+        function func(){
+            window.open("https://www.google.com/", "_blank", "height=300, width=300, top=0, left=0");
+            window.open("https://www.google.com/", "_blank", "height=300, width=300, top=0, left="+right);
+            window.open("https://www.google.com/", "_blank", "height=300, width=300, left=0, top="+bottom);
+            window.open("https://www.google.com/", "_blank", "height=300, width=300, top="+bottom+", left="+right);
+            window.open("https://www.google.com/", "_blank", "height=300, width=300, top="+center1+", left="+center2);
+
+
+        }
+
+    </script>
     
 </body>
 </html>
