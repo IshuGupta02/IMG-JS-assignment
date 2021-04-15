@@ -7,11 +7,46 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="forward()">
+        Forward
+    </button>
+
+    <img src="mail.png" alt="" id="image" height="100px">
 
 
+    <button onclick="reverse()">
+        Backward
+    </button>
 
     <script>
-        
+        var i=0;
+        var image_src=["mail.png", "instagram.png","medium.png","phone.png"];
+
+        function forward(){
+            if(i<=2){
+                document.getElementById("image").src=image_src[i+1];
+                i++;
+
+            }
+           else{
+               alert("you have reached the end");
+           }
+
+        }
+
+        function reverse(){
+            if(i>=1){
+                document.getElementById("image").src=image_src[i-1];
+                i--;
+
+            }
+           else{
+               alert("you have reached the end");
+           }
+
+        }
+
+
     </script>
     
 </body>
