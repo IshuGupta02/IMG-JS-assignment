@@ -5,10 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        .circle{
+            height: 400px;
+            width: 400px;
+            display: flex;
+
+
+        }
+        .one{
+            height: 100%;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .two{
+            height: 100%;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        img{
+            height: 40px;
+        }
+    </style>
 </head>
 <body>
 
+    <button onclick="startA()">
+        Start animation
+    </button>
+
+    <div class="circle">
+        <div class="one">
+            <img src="marble2.jpg" alt="" id="marble1" onmouseover="func1()" onmouseout="func2()">
+
+        </div>
+
+        <div class="two">
+            <img src="marble1.jpg" alt="" id="marble2" onmouseover="func1()" onmouseout="func2()">
+            <img src=" marble1.jpg" alt="" id="marble3" onmouseover="func1()" onmouseout="func2()">
+
+        </div>
+
+        <div class="two">
+            <img src="marble1.jpg" alt="" id="marble4" onmouseover="func1()" onmouseout="func2()">
+            <img src="marble1.jpg" alt="" id="marble5" onmouseover="func1()" onmouseout="func2()">
+
+        </div>
+
+        <div class="one">
+            <img src="marble1.jpg" alt="" id="marble6" onmouseover="func1()" onmouseout="func2()">
+
+        </div>
+        
+
+    </div>
     
+
+
+
 
     <script>
 
