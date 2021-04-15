@@ -14,19 +14,22 @@
     </style>
 
     <script>
-        function open(){
-            window.open("https://www.google.com/");
+
+        var newWindow;  
+        function open1(){
+            newWindow = window.open(   
+                    "https://www.google.com/", "_blank");  
         }
 
-        function close(){
-            // window.open("https://www.google.com/");
+        function close1(){
+            newWindow.close();   
         }
     </script>
 </head>
 <body>
 
-    <img src="mail.png" alt="" id="image" onclick="open()" class="image">
-    <button onclick="close()">
+    <img src="mail.png" alt="" id="image" onclick="open1()" class="image">
+    <button onclick="close1()">
         Close google
     </button>
     

@@ -51,51 +51,27 @@ function validateCity(){
 function validatePassword1(){
     var pass1=document.getElementById("password1").value;
 
-    if(pass1.length==0){
-        createprompt("Please enter password","password_validate_original");
-        return false;
-        
+
+
+    if(pass1.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/)){
+        createprompt("Strong Password" , "password_validate_original" );
+        return true;
     }
-
-    if(pass1.length<6){
-        createprompt("length of password should atleast be 6","password_validate_original");
-        return false;
-    }
-
-    if(!pass1.match(/[A-Z]/)){
-
-        createprompt("should contain atleast one uppercase letter","password_validate_original");
+    if(pass1.length<=5){
+        createprompt("Password must contain atleast 6 characters" , "password_validate_original" );
         return false;
     }
-
-    if(!pass1.match(/[a-z]/)){
-
-        createprompt("should contain atleast one lowercase letter","password_validate_original");
-        return false;
+  
+    if(pass1.match(/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[!@#\$%\^&\*]))|((?=.*[a-z])(?=.*[!@#\$%\^&\*]))|((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]))|((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/)){
+        createprompt("Weak Password" , "password_validate_original");
+        return true;
+    }
+    if(pass1.match(/^((?=.*[a-z])|(?=.*[A-Z])|(?=.*[0-9])|(?=.*[!@#\$%\^&\*])|((?=.*[!@#\$%\^&\*])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.*[0-9]))|((?=.*[a-z])(?=.*[!@#\$%\^&\*])(?=.*[0-9])))(?=.{6,})/)){
+        createprompt("Weak Password" , "password_validate_original" );
+        return true;
     }
 
-    if(!pass1.match(/[0-9]/)){
 
-        createprompt("should contain atleast one digit","password_validate_original");
-        return false;
-    }
-
-    // if(!pass1.match(/(?=.{6,})(?=.\d+)(?=.[@#$%&*!]+)(?=[A-Za-z]+)/)){
-    //     createprompt("should contain atleast one digit, uppercase, lowecase letter and a special character","password_validate_original");
-    //     return false;
-        
-
-    // }
-
-    // if(!pass1.match(/[]/)){ //!@#$%^&*()_-+={[}]|\:;"'<,>.?
-    //     // \^\$\+={}\\\"\'\.\?
-
-    //     createprompt("should contain atleast special character","password_validate_original");
-    //     return false;
-    // }
-
-    createprompt("valid!","password_validate_original");
-    return true;
 
 
 }
