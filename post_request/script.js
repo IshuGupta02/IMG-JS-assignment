@@ -27,10 +27,16 @@ function funcSubmit(){
     
         ajaxObject.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                alert("Login successfull");
+                let response = JSON.parse(this.response);
+                alert("Login successfull"+", response:" + response["token"]);
             }
+            else if(this.readyState == 4 && this.status != 200){
+                alert("login unsuccessfull");
+            }
+            
         
         }
+      
 
      }
 
