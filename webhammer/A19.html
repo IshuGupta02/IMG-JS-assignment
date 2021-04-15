@@ -40,7 +40,7 @@
             var time1=getCookie("time");
 
             if(no_of_visits!=""){
-                let visit_new=number(no_of_visits)+1;
+                let visit_new=parseInt(no_of_visits)+1;
                 alert("number of visits = "+visit_new+" at"+time1);
 
                 setCookie("visit", visit_new);
