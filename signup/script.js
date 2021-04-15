@@ -128,7 +128,7 @@ function validatePhone(){
         createprompt("This field cannot be empty","phone_validate");
         return false;
     }
-    if(!phone.match(/^(((\+91)?\s*(-)?\s*)|(0?))[6789][0-9]{9}$/)){
+    if(!phone.match(/^(((\+91)?\s*(-)?\s*)|(0?)|((91)?\s*(-)\s*))[6789][0-9]{9}$/)){
         createprompt("invalid indian phone number","phone_validate");
         return false;
 
