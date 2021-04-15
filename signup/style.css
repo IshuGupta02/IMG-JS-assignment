@@ -8,3 +8,12 @@
     margin: 0;
     padding: 0;
 }
+
+.inner{
+    width: 100%;
+}
+
+#btn{
+    align-self: flex-start;
+    width: fit-content;
+}

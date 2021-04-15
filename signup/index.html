@@ -14,50 +14,67 @@
 
     <form action="" class="signup" name="myForm">
 
-        <div>
+        <div class="inner">
+            <br>
             <label for="name">ENTER NAME</label>
+            <br>
             <input type="text" id="name" onkeyup="validateName()">
+            
             <label id="name_validate"></label>
+            
 
         </div>
 
-        <div>
+        <div class="inner">
+            <br>
             <label for="city">CITY</label>
+            <br>
             <input type="text" id="city" onkeyup="validateCity()">
             <label id="city_validate"></label>
         </div>
-        
-        <div>
-            <label for="password1">PASSWORD</label>
-            <input type="password" id="password1" onkeyup="validatePassword1()">
-            <label id="password_validate_original"></label>
-            
-        </div>
 
-        <div>
-            <label for="passowrd2"> CONFIRM PASSWORD</label>
-            <input type="password" id="password2" onkeyup="validatePassword2()">
-            <label id="password_validate"></label>
-
-        </div>
-
-        <div>
-            <label for="mail_id">Email</label>
+        <div class="inner">
+            <br>
+            <label for="mail_id">EMAIL</label>
+            <br>
             <input type="email" id="mail_id" onkeyup="validateEmail()">
             <label id="email_validate"></label>
 
         </div>
 
+        
+        <div class="inner">
+            <br>
+            <label for="password1">PASSWORD</label>
+            <br>
+            <input type="password" id="password1" onkeyup="validatePassword1()">
+            <label id="password_validate_original"></label>
+            
+        </div>
+
+        <div class="inner">
+            <br>
+            <label for="passowrd2"> CONFIRM PASSWORD</label>
+            <br>
+            <input type="password" id="password2" onkeyup="validatePassword2()">
+            <label id="password_validate"></label>
+
+        </div>
+
+        
 
 
-        <div>
+        <div class="inner">
+            <br>
+            <label >Gender</label>
+            <br>
             <div>
                 <input type="radio" id="male" name="gender" value="male">
                 <label for="male">Male</label><br>
 
             </div>
 
-            <div>
+            <div >
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label><br>
 
@@ -74,25 +91,30 @@
 
         </div>
 
-        <div>
+        <div class="inner">
+            <br>
             <label for="age">AGE</label>
+            <br>
             <input type="Number" id="age" onkeyup="validateAge()">
             <label id="age_validate"></label>
 
         </div>
 
 
-        <div>
+        <div  class="inner">
+            <br>
             <label for="phone">PHONE NUMBER</label>
+            <br>
             <input type="text" id="phone" onkeyup="validatePhone()">
             <label id="phone_validate"></label>
 
 
         </div>
 
-        <div>
+        <div class="inner">
+            <br>
             <label for="education">Education qualification</label>
-
+            <br>
             <select name="education1" id="education">
                 <option value="Select qualification">Select qualification</option>
                 <option value="10th">10th</option>
@@ -112,7 +134,10 @@
         </button>
             -->
 
-            <input type="button" onclick="checkall()" value="Submit">
+            <br>
+            <br>
+
+            <input type="button" onclick="checkall()" value="Submit" class="inner" id="btn">
 
 
     </form>
