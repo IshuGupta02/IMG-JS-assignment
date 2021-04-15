@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <style>
+        .para{
+            font-size: 20px;
+        }
+
+        #word1, #word2, #word3, #word4, #word5{
+            width: fit-content;
+        }
+        div{
+            display: inline;
+        }
+    </style>
+
     
 </head>
 <body>
+
+    <h1 id="name"> </h1>
+
+    <div class="para" >
+        Google LLC is an <div id="word1"></div> multinational technology company that<div id="word2"></div> specializes in Internet-related<div id="word3"></div> services and products, which include online <div id="word4"></div>advertising technologies, a search engine, cloud computing, <div id="word5"></div>software, and hardware.
+    </div>
 
     <!-- <div id="sample"></div> -->
     
@@ -25,43 +44,78 @@
 
         var color=prompt("Please specify a color(one of the 16 named colors or a hex value)");
 
-        document.write("<h1>Hello "+name+"!</h1");
+        let tag=document.getElementById("name");
+        let text=document.createTextNode("HELLO "+name);
+        tag.appendChild(text);
 
-        var outertag=document.createElement("div");
+        let tag1=document.getElementById("word1");
+        let text1=document.createTextNode(word[0]);
+        tag1.appendChild(text1);
+
+        let tag2=document.getElementById("word2");
+        let text2=document.createTextNode(word[1]);
+        tag2.appendChild(text2);
+
+        let tag3=document.getElementById("word3");
+        let text3=document.createTextNode(word[2]);
+        tag3.appendChild(text3);
+
+        let tag4=document.getElementById("word4");
+        let text4=document.createTextNode(word[3]);
+        tag4.appendChild(text4);
+
+        let tag5=document.getElementById("word5");
+        let text5=document.createTextNode(word[4]);
+        tag5.appendChild(text5);
+
+        tag1.style.backgroundColor=color;
+        tag2.style.backgroundColor=color;
+        tag3.style.backgroundColor=color;
+        tag4.style.backgroundColor=color;
+        tag5.style.backgroundColor=color;
+
+
+
+
+
+
+        // document.write("<h1>Hello "+name+"!</h1");
+
+        // var outertag=document.createElement("div");
         
-        for(let i=0;i<5;i++){
-            let tag=document.createElement("p");
-            let text=document.createTextNode(word[i]);
-            tag.appendChild(text);
-            outertag.appendChild(tag);
+        // for(let i=0;i<5;i++){
+        //     let tag=document.createElement("p");
+        //     let text=document.createTextNode(word[i]);
+        //     tag.appendChild(text);
+        //     outertag.appendChild(tag);
             
 
-        }
+        // }
 
-        // console.log(outertag);
+        // // console.log(outertag);
         
 
-        // var parent=document.getElementsByTagName('body');
-        var parent= document.querySelector('body');
-        parent.appendChild(outertag);
+        // // var parent=document.getElementsByTagName('body');
+        // var parent= document.querySelector('body');
+        // parent.appendChild(outertag);
 
 
-        // parent.setAttribute('class', 'poem');        
+        // // parent.setAttribute('class', 'poem');        
 
-        parent.style.display='flex';
-        parent.style.flexDirection='column';
-        parent.style.justifyContent= 'space-evenly';
-        parent.style.alignItems= 'center';
+        // parent.style.display='flex';
+        // parent.style.flexDirection='column';
+        // parent.style.justifyContent= 'space-evenly';
+        // parent.style.alignItems= 'center';
 
-        // parent.style.color=color;
+        // // parent.style.color=color;
 
 
-        var para=document.querySelectorAll('p');
-        for(let i=0;i<para.length;i++){
-            para[i].style.padding ='2px';
-            para[i].style.backgroundColor=color;
+        // var para=document.querySelectorAll('p');
+        // for(let i=0;i<para.length;i++){
+        //     para[i].style.padding ='2px';
+        //     para[i].style.backgroundColor=color;
 
-        }
+        // }
         
 
 
