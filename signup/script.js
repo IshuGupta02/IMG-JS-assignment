@@ -108,7 +108,7 @@ function validateEmail(){
 
     }
 
-    if(!email.match(/[^\s@\W]+\.?_?\.?[a-z]?@[^\s@\W]+\.?[^\s@\W]+?\.?[^\s@\W]+?\.?(com|in|edu)/)){
+    if(!email.match(/[^\s@\W]+\.?_?\.?[a-z]?@[^\s@\W]*\.?[^\s@\W]*?\.?[^\s@\W]*?\.[a-zA-Z]+$/)){
 
         createprompt("Invalid email","email_validate");
         return false;
