@@ -13,12 +13,12 @@ function validateName(){
         return false;
     }
 
-    if(!name.match(/^[a-zA-Z\s]+$/)){
+    if(!name.match(/^[a-zA-Z\s\']+$/)){
         createprompt("Invalid name","name_validate");
         return false;
     }
 
-    createprompt("Hi!, Welcome "+name,"name_validate");
+    createprompt("","name_validate");
     // console.log("valid");
     return true;
 
@@ -34,13 +34,13 @@ function validateCity(){
         return false;
     }
 
-    if(!name.match(/^[a-zA-Z]+$/)){
+    if(!name.match(/^[a-zA-Z\s\']+$/)){
         createprompt("Invalid name","city_validate");
         // console.log("invalid");
         return false;
     }
 
-    createprompt("Correct name,  "+name,"city_validate");
+    createprompt("","city_validate");
     return true;
 
 }
@@ -80,13 +80,14 @@ function validatePassword1(){
         return false;
     }
 
-    if(!pass1.match(/[*&@]/)){
+    if(!pass1.match(/[]/)){ //!@#$%^&*()_-+={[}]|\:;"'<,>.?
+        // \^\$\+={}\\\"\'\.\?
 
-        createprompt("should contain atleast special character(*/&/@)","password_validate_original");
+        createprompt("should contain atleast special character","password_validate_original");
         return false;
     }
 
-    createprompt("Correct Passoword","password_validate_original");
+    createprompt("correct password","password_validate_original");
     return true;
 
 
@@ -109,7 +110,7 @@ function validatePassword2(){
 
     }
 
-    createprompt("Correct Passoword","password_validate");
+    createprompt("","password_validate");
     return true;
 
 }
@@ -117,13 +118,21 @@ function validatePassword2(){
 function validateEmail(){
     var email=document.getElementById("mail_id").value;
 
-    if(!email.match(/^[\w]+@[A-Za-z]+(\.com)$/)){
+    if(email.length==0){
+        createprompt("This field cannot be empty","email_validate");
+        return false;
+
+
+    }
+
+    if(!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+
         createprompt("Invalid email","email_validate");
         return false;
 
     }
 
-    createprompt("valid email","email_validate");
+    createprompt("","email_validate");
     return true;
 
 }
@@ -132,14 +141,20 @@ function validatePhone(){
     let phone1=document.getElementById("phone").value;
     let phone=phone1.trim();
 
-
-    if(!phone.match(/^(\+91)?\s*(-)?\s*[6789][0-9]{9}$/)){
+    if(phone.length==0){
+        createprompt("This field cannot be empty","phone_validate");
+        return false;
+    }
+    if(!phone.match(/^(((\+91)?\s*(-)?\s*)|(0?))[6789][0-9]{9}$/)){
         createprompt("invalid indian phone number","phone_validate");
         return false;
 
+        
+        // /^(\+91)?\s*(-)?\s*[6789][0-9]{9}$/
+
     }
 
-    createprompt("valid, entered"+ phone,"phone_validate");
+    createprompt("","phone_validate");
     return true;
 
     
@@ -149,13 +164,13 @@ function validateAge(){
     let age=document.getElementById("age").value;
 
     if(age.length===0){
-        createprompt("Please enter age","age_validate");
+        createprompt("This field cannot be empty","age_validate");
         return false;
 
     }
 
     if(age<0){
-        createprompt("invalid number","age_validate");
+        createprompt("invalid age","age_validate");
         return false;
 
     }
@@ -165,7 +180,7 @@ function validateAge(){
         return false;
     }
 
-    createprompt("valid age","age_validate");
+    createprompt("","age_validate");
     return true;
 
 }
@@ -177,7 +192,7 @@ function validateGender(){
         return false;
 
     }
-
+    createprompt("","gender_validate");
     return true;
 }
 
@@ -190,6 +205,8 @@ function validateQualification(){
 
     }
 
+    createprompt("","education_validate");
+
     return true;
 
 }
@@ -198,17 +215,6 @@ function validateQualification(){
 
 
 function checkall(){
-    // validateGender();
-    // validateName();
-    // validateAge();
-    // validatePhone();
-    // validateEmail();
-    // validatePassword2();
-    // validatePassword1();
-    // validateCity();
-    // validateQualification();
-
-
     if(
     validateName()&&
     validateCity()&&

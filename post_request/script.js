@@ -4,7 +4,7 @@ function funcSubmit(){
     let email=document.getElementById('mail_id').value;
     let password1=document.getElementById('pass').value;
 
-     if (email.match(/[^\s@\W]+\.?_?\.?[a-z]?@[^\s@\W]+\.?[^\s@\W]+?\.?[^\s@\W]+?\.?(com|in|edu)/)) {
+     if (email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
 
         // console.log("hello");
         const formData = new FormData();
@@ -28,6 +28,7 @@ function funcSubmit(){
         ajaxObject.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 let response = JSON.parse(this.response);
+                console.log(response);
                 alert("Login successfull"+", response:" + response["token"]);
             }
             else if(this.readyState == 4 && this.status != 200){
