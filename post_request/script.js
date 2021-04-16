@@ -4,7 +4,7 @@ function funcSubmit(){
     let email=document.getElementById('mail_id').value;
     let password1=document.getElementById('pass').value;
 
-     if (email.match(/[^\s@\W]+\.?_?\.?[a-z]?@[^\s@\W]*\.?[^\s@\W]*?\.?[^\s@\W]*?\.[a-zA-Z]+$/)) {
+     if (email.match(/[^\s@\W]+\.?_?\.?[a-z0-9A-Z]*@[^\s@\W]+\.?[^\s@\W]*?\.?[^\s@\W]*?\.[a-zA-Z]+$/)) {
 
         // console.log("hello");
         const formData = new FormData();
